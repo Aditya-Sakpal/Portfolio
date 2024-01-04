@@ -9,6 +9,12 @@ const port = 4000
 
 app.use(express.json());
 
+app.use(cors({
+  origin:['https://portfolio-frontend-brown-nine.vercel.app'],
+  methods:['POST','GET'],
+  credentials:true
+}))
+
 
 const HUGGING_FACE_API=process.env.HUGGING_FACE_API
 const CHAT_API_KEY=process.env.CHAT_API_KEY
