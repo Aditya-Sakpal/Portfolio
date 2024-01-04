@@ -7,16 +7,16 @@ const axios = require('axios');
 
 const app=express()
 const port = 4000
-app.use(cors({
-  origin:["https://deploy-mern-1whq.vercel.app"],
-  methods:["POST","GET"],
-  credentials:true
-}));
+
 app.use(express.json());
 
 
-const {HUGGING_FACE_API}=process.env
-const {CHAT_API_KEY}=process.env
+const {HUGGING_FACE_API}=process.env.HUGGING_FACE_API
+const {CHAT_API_KEY}=process.env.CHAT_API_KEY
+
+app.use("/",(req,res)=>{
+  res.send("Server is running")
+})
 
 app.get('/certifications', async (req, res) => {
     try {
