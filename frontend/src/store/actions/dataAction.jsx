@@ -5,7 +5,7 @@ import axios from "axios"
 
 export const fetchData = () => {
     return async (dispatch) => {
-        await axios.get('https://portfolio-pklpsxyst-giga-coders-projects.vercel.app/data')
+        await axios.get('https://portfolio-backend-ig9v0fjrc-giga-coders-projects.vercel.app/data')
             .then(res => {
                 console.log(res.data)
                 // localStorage.setItem("data",JSON.stringify(res.data))
