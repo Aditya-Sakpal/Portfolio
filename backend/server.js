@@ -9,12 +9,6 @@ const port = 4000
 
 app.use(express.json());
 
-app.use(cors({
-  origin:['https://portfolio-frontend-brown-nine.vercel.app'],
-  methods:['POST','GET'],
-  credentials:true
-}))
-
 app.options('*', cors());
 
 
