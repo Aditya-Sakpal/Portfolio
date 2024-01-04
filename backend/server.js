@@ -10,8 +10,8 @@ const port = 4000
 app.use(express.json());
 
 
-const {HUGGING_FACE_API}=process.env.HUGGING_FACE_API
-const {CHAT_API_KEY}=process.env.CHAT_API_KEY
+const HUGGING_FACE_API=process.env.HUGGING_FACE_API
+const CHAT_API_KEY=process.env.CHAT_API_KEY
 
 app.use("/",(req,res)=>{
   res.send("Server is running")
