@@ -15,6 +15,8 @@ app.use(cors({
   credentials:true
 }))
 
+app.options('*', cors());
+
 
 const HUGGING_FACE_API=process.env.HUGGING_FACE_API
 const CHAT_API_KEY=process.env.CHAT_API_KEY
@@ -68,6 +70,7 @@ app.get('/certifications', async (req, res) => {
         experience,
         feedbacks
       };
+      res.header('Access-Control-Allow-Origin', 'https://portfolio-frontend-brown-nine.vercel.app');
       res.status(200).json(combinedData);
     }catch(e){
       res.status(500).send('Internal Server Error');
