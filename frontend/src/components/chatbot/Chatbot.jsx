@@ -53,7 +53,7 @@ function Chatbot() {
     ]);
     setCurrentMessage('Bot is typing ...')
     setIsInputDisabled(true)
-    const response = await axios.post("https://portfolio-backend-jtu75ppll-giga-coders-projects.vercel.app/chats", { query: currentMessage })
+    const response = await axios.post("https://portfolio-backend-flax-alpha.vercel.app/chats", { query: currentMessage })
     console.log(response)
     if (response.data.output) {
       setMessages((prevMessages) => [
