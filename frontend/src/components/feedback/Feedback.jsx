@@ -132,7 +132,7 @@ function Feedback() {
           console.log("I was closed by the timer");
         }
       });
-      const response = await axios.post("https://portfolio-backend-jtu75ppll-giga-coders-projects.vercel.app/feedbacks", { name, feedback })
+      const response = await axios.post("https://portfolio-backend-flax-alpha.vercel.app/feedbacks", { name, feedback })
       setFeeds(response.data.feedbacks.reverse())
 
       dispatch(fetchData())
